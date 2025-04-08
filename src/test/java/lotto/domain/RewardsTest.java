@@ -18,10 +18,10 @@ public class RewardsTest {
     @Test
     @DisplayName("1등이 1개 있으면 1리턴")
     void firstPrizeCount() {
-        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1,
-                Reward.SECOND, 2,
-                Reward.THIRD, 1,
-                Reward.FOURTH, 1
+        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1L,
+                Reward.SECOND, 2L,
+                Reward.THIRD, 1L,
+                Reward.FOURTH, 1L
         ));
         Assertions.assertThat(rewards.prizeCount(Reward.FIRST)).isEqualTo(1);
     }
@@ -29,10 +29,10 @@ public class RewardsTest {
     @Test
     @DisplayName("2등이 2개 있으면 2리턴")
     void secondPrizeCount() {
-        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1,
-                Reward.SECOND, 2,
-                Reward.THIRD, 1,
-                Reward.FOURTH, 1
+        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1L,
+                Reward.SECOND, 2L,
+                Reward.THIRD, 1L,
+                Reward.FOURTH, 1L
         ));
         Assertions.assertThat(rewards.prizeCount(Reward.SECOND)).isEqualTo(2);
     }
@@ -40,10 +40,10 @@ public class RewardsTest {
     @Test
     @DisplayName("3등이 1개 있으면 1리턴")
     void thirdPrizeCount() {
-        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1,
-                Reward.SECOND, 2,
-                Reward.THIRD, 1,
-                Reward.FOURTH, 1
+        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1L,
+                Reward.SECOND, 2L,
+                Reward.THIRD, 1L,
+                Reward.FOURTH, 1L
         ));
         Assertions.assertThat(rewards.prizeCount(Reward.THIRD)).isEqualTo(1);
     }
@@ -51,10 +51,10 @@ public class RewardsTest {
     @Test
     @DisplayName("4등이 1개 있으면 1리턴")
     void fourthPrizeCount() {
-        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1,
-                Reward.SECOND, 2,
-                Reward.THIRD, 1,
-                Reward.FOURTH, 1
+        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1L,
+                Reward.SECOND, 2L,
+                Reward.THIRD, 1L,
+                Reward.FOURTH, 1L
         ));
         Assertions.assertThat(rewards.prizeCount(Reward.FOURTH)).isEqualTo(1);
     }
@@ -62,11 +62,11 @@ public class RewardsTest {
     @Test
     @DisplayName("5등이 1개 있으면 1리턴")
     void fifthPrizeCount() {
-        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1,
-                Reward.SECOND, 2,
-                Reward.THIRD, 1,
-                Reward.FOURTH, 1,
-                Reward.FIFTH, 1
+        Rewards rewards = new Rewards(Map.of(Reward.FIRST, 1L,
+                Reward.SECOND, 2L,
+                Reward.THIRD, 1L,
+                Reward.FOURTH, 1L,
+                Reward.FIFTH, 1L
         ));
         Assertions.assertThat(rewards.prizeCount(Reward.FOURTH)).isEqualTo(1);
     }

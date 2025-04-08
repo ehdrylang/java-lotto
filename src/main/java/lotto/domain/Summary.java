@@ -2,6 +2,7 @@ package lotto.domain;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Summary {
@@ -19,9 +20,9 @@ public class Summary {
     }
 
     public Rewards rewards() {
-        Map<Reward, Integer> rewards = matchResults.stream()
+        Map<Reward, Long> rewards = matchResults.stream()
                 .map(Reward::valueOf)
-                .collect(Collectors.toUnmodifiableMap(reward -> reward, reward -> 1, Integer::sum));
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         return new Rewards(rewards);
     }
 }
